@@ -9,6 +9,8 @@ import fastClick from 'fastclick'
 import './assets/styles/reset.css'
 // 解决移动端多倍屏将1px边框显示成多像素边框问题
 import './assets/styles/border.css'
+// 引入iconfont
+import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
