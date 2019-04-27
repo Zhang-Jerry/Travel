@@ -73,9 +73,9 @@ npm -v
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 ```
 ### 2.页面样式初始化
-> 引入 reset.css ‘/资源/reset.css’
+> 引入 reset.css ‘/src/assets/style/reset.css’
 ### 3.移动端多倍屏将1px边框显示成多像素边框问题
-> 引入 border.css ‘/资源/border.css’
+> 引入 border.css ‘/src/assets/style/border.css’
 ### 3.解决部分手机机型上部分浏览器存在300ms的click延时问题
 ```
 import fastClick from 'fastclick'
