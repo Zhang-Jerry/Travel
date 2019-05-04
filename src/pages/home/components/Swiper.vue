@@ -17,6 +17,10 @@ export default {
   data () {
     return {
       swiperOption: {
+        // 可设置数值来指定播放速度
+        autoplay: 4000,
+        // 切换图片速度
+        speed: 1000,
         // 定位圆点配置
         pagination: '.swiper-pagination',
         // 循环轮播配置

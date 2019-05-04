@@ -367,7 +367,7 @@ let vm = new Vue({
 ## 九、其它基础知识汇总
 ### 1.块元素自适应撑开高度
 ```
-overflow: hidden;   // 非必须
+overflow: hidden;   // 当poadding-bottom百分比值计算的不准确时，可隐藏超出的部分
 width: 100%;
 height: 0;
 poadding-bottom: 30%;   // padding取值为百分比时，参照的是父元素的宽度
@@ -386,6 +386,11 @@ height: 30vw;   // 浏览器兼容性不好
 }
 ```
 
+### 3.flex布局内容不超出外层容器方法
+```
+// 为元素设置
+min-width: 0;
+```
 
 
 
