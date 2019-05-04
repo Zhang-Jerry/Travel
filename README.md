@@ -365,8 +365,26 @@ let vm = new Vue({
 
 
 ## 九、其它基础知识汇总
+### 1.块元素自适应撑开高度
+```
+overflow: hidden;   // 非必须
+width: 100%;
+height: 0;
+poadding-bottom: 30%;   // padding取值为百分比时，参照的是父元素的宽度
+```
+或
+```
+width: 100%;
+height: 30vw;   // 浏览器兼容性不好
+```
 
-
+### 2.Vue中scoped的样式穿透
+当我们想要在父组件scoped限定的style中，修改子组件的样式时，可使用样式穿透符‘>>>’
+```
+.father-classname >>> .son-classname {
+    background: #fff;
+}
+```
 
 
 
