@@ -4,7 +4,7 @@
       热销推荐
     </div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -19,30 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1904/a2/a23ae48aac0c0ab2a3.water.jpg_200x200_38cef490.jpg',
-        title: '西溪国家湿地洪园',
-        desc: '西溪国家湿地洪园西溪国家湿地洪园西溪国家湿地洪园'
-      }, {
-        id: '002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1903/e0/e0e0c6ca274ad49aa3.img.jpg_200x200_0f072efb.jpg',
-        title: '西溪国家湿地公园·周家村',
-        desc: '西溪国家湿地公园·周家村西溪国家湿地公园·周家村'
-      }, {
-        id: '003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1709/28/288fbeccc335f774a3.img.jpg_200x200_4a81bde9.jpg',
-        title: '印象西湖',
-        desc: '印象西湖印象西湖印象西湖'
-      }, {
-        id: '004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/27/8211cadd5d9fefeaa044c5b7eefc695d.jpg_200x200_38791bd1.jpg',
-        title: '千岛湖',
-        desc: '千岛湖千岛湖千岛湖千岛湖'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
