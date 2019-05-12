@@ -1,9 +1,23 @@
+# Build Setup
+
+```
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
 # Vue2.5开发去哪网(课程跟学项目)
 
 > 项目来源：慕课网 - Vue2.5开发去哪网app
 > 文档说明：1.记录知识细节；2.归纳学习心得。
-
-
 
 
 
@@ -405,18 +419,13 @@ this.timer = setTimeout(() => {
 ``
 > 由于现在广泛使用的屏幕都有固定的刷新率（比如最新的一般在 60Hz），在两次硬件刷新之间浏览器进行两次重绘是没有意义的只会消耗性能。浏览器会利用这个间隔 16ms（1000ms/60）适当地对绘制进行节流， 因此 16ms 就成为页面渲染优化的一个关键时间。
 
-## Build Setup
+### 6.vuex
+**核心思想**：将应用程序的所有组件状态（或公共数据）集中存储在state对象中，通过特定的接口改变state中的公共数据，从而实现相应组件状态/数据的改变。
 
-```
-# install dependencies
-npm install
+**核心概念**：
+- **State** - 用于集中存储状态/数据的对象。
+- **Getter** - 用于根据state中的值，计算出新的值。相当于vue中的计算属性computed。
+- **Mutations** - 用于集中存放修改state值的事件方法，这些方法通过store.commit('funName', canshu)来触发。
+- **Actions** - 用于存放提交Mutations的事件方法，这些方法通过store.dispatch('funName', canshu)来触发。
+- **Module** - 用于将复杂store分隔成模块，每个模块具有完整的vuex属性(state、getter、mutations、actions)。
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```

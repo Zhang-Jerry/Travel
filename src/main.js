@@ -7,6 +7,8 @@ import router from './router'
 import fastClick from 'fastclick'
 // 轮播插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
+
 // 样式初始化，解决浏览器样式差异
 import 'styles/reset.css'
 // 解决移动端多倍屏将1px边框显示成多像素边框问题
@@ -24,6 +26,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
